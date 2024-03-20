@@ -1,4 +1,4 @@
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 //next image
 import Image from "next/image";
 //components
@@ -22,9 +22,9 @@ const PizzaDetails = ({ pizza }) => {
   useEffect(() => {
     size === "small"
       ? setPrice(parseFloat(pizza.priceSm + additionalToppingPrice).toFixed(2))
-      : side === "medium"
+      : size === "medium"
       ? setPrice(parseFloat(pizza.priceMd + additionalToppingPrice).toFixed(2))
-      : side === "large"
+      : size === "large"
       ? setPrice(parseFloat(pizza.priceLg + additionalToppingPrice).toFixed(2))
       : null;
   });
@@ -35,7 +35,7 @@ const PizzaDetails = ({ pizza }) => {
       const toppingPrice = additionalTopping.reduce((a, c) => {
         return a + c.price;
       }, 0);
-      setAdditionalTopping(toppingPrice);
+      setAdditionalToppingPrice(toppingPrice);
     } else setAdditionalToppingPrice(0);
   }, [additionalTopping]);
 
@@ -44,18 +44,25 @@ const PizzaDetails = ({ pizza }) => {
       {/* top */}
       <div className="lg:flex-1 flex justify-center items-center">
         <div className="max-w-[300px] lg:max-w-none mt-6 lg:mt-0">
-          <Image width={450} height={450} src={pizza.image} alt="" priority={1} className="mx-auto relative" />
+          <Image
+            width={450}
+            height={450}
+            src={pizza.image}
+            alt=""
+            priority={1}
+            className="mx-auto relative"
+          />
         </div>
       </div>
       {/* detail */}
-      <div className="bg-pink-100 flex flex-col flex-1">
+      <div className="flex flex-col flex-1">
         <div className="flex-1 p-2 text-center lg:text-left">
           <div className="flex-1 bg-white overflow-y-scroll h-[46vh] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
             {/* name */}
             <div className="font-semibold">
               <h2 className="capitalize text-3xl mb-1">{pizza.name}</h2>
               {/* size & crust text */}
-              <div className="bg-yellow-200 mb-6 text-lg font-medium">
+              <div className="mb-6 text-lg font-medium">
                 <span>
                   {size === "small"
                     ? "25cm"
@@ -71,13 +78,20 @@ const PizzaDetails = ({ pizza }) => {
             {/* size selection  */}
             <SizeSelection pizza={pizza} size={size} setSize={setSize} />
             {/* crust selection */}
-            <CrustSelection />
+            <CrustSelection crust={crust} setCrust={setCrust} />
             {/* toppings */}
-            <div>Choose topping</div>
+            <div className="mb-4 text-xl font-semibold">Choose topping</div>
             {/* topping list  */}
-            <div>
-              {pizza.topping?.map((topping, index) => {
-                return <Topping key={index} />;
+            <div className="flex flex-1 flex-wrap gap-2 py-1 justify-center lg:justify-start">
+              {pizza.toppings?.map((topping, index) => {
+                return (
+                  <Topping
+                    topping={topping}
+                    additionalTopping={additionalTopping}
+                    setAdditionalTopping={setAdditionalTopping}
+                    key={index}
+                  />
+                );
               })}
             </div>
           </div>
