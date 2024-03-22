@@ -1,5 +1,4 @@
 const CrustSelection = ({ crust, setCrust }) => {
-  console.log('crust', crust);
   return (
     <div className="flex justify-center items-center lg:justify-start">
       {/* crust */}
@@ -8,7 +7,7 @@ const CrustSelection = ({ crust, setCrust }) => {
           <input
             className="appearance-none w-4 h-4 border border-gray-400 rounded-full checked:bg-gradient-to-r checked: from-primary checked:to-secondary checked:border-secondary cursor-pointer"
             type="radio"
-            name='crust'
+            name="crust"
             value="traditional"
             checked={crust === "traditional"}
             onChange={(e) => setCrust(e.target.value)}
@@ -19,12 +18,11 @@ const CrustSelection = ({ crust, setCrust }) => {
           <input
             className="appearance-none w-4 h-4 border border-gray-400 rounded-full checked:bg-gradient-to-r checked: from-primary checked:to-secondary checked:border-secondary cursor-pointer"
             type="radio"
-            name='crust'
+            name="crust"
             value="thin"
             checked={crust === "thin"}
             onChange={(e) => {
-              console.log(e.target.value);
-              setCrust(e.target.value)
+              setCrust(e.target.value);
             }}
           />{" "}
           Thin
