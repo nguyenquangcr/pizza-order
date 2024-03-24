@@ -19,13 +19,13 @@ const Banner = () => {
         >
           {/* text */}
           <MouseParallaxChild factorX={0.1} factorY={0.2}>
-            <div className="flex flex-col lg:flex-row items-center text-center lg:text-left flex-1 px-6 text-white">
+            <div className="flex flex-col lg:flex-row items-center text-center lg:text-left flex-1 px-6 text-white mb-4">
               <div className="flex-1">
                 <div className="font-bangers text-[32px] text-white uppercase tracking-[0.03em]">
-                  Best pizza in town
+                  Best medicine in town
                 </div>
                 <h1 className="text-6xl lg:text-8xl font-bangers drop-shadow-md">
-                  Pizza perfection <br /> in every bite
+                  Medicine perfection <br /> in every bite
                 </h1>
               </div>
             </div>
@@ -36,7 +36,7 @@ const Banner = () => {
               {/* image */}
               <div className="flex-1 flex justify-end max-w-sm lg:max-w-max">
                 <Image
-                  src={"/pizza-banner.png"}
+                  src={"/doctor-1015624_1920.jpg"}
                   width={550}
                   height={558}
                   alt=""
@@ -45,7 +45,7 @@ const Banner = () => {
               </div>
             </div>
             {/* chill image 1*/}
-            <MouseParallaxChild
+            {/* <MouseParallaxChild
               factorX={0.2}
               factorY={0.3}
               className="absolute top-6 left-4 hidden xl:flex"
@@ -57,9 +57,9 @@ const Banner = () => {
                 alt=""
                 priority={1}
               />
-            </MouseParallaxChild>
+            </MouseParallaxChild> */}
             {/* chill image 2*/}
-            <MouseParallaxChild
+            {/* <MouseParallaxChild
               factorX={0.4}
               factorY={0.4}
               className="absolute top-16 -left-4 hidden xl:flex"
@@ -71,9 +71,9 @@ const Banner = () => {
                 alt=""
                 priority={1}
               />
-            </MouseParallaxChild>
+            </MouseParallaxChild> */}
             {/* garlic image 1*/}
-            <MouseParallaxChild
+            {/* <MouseParallaxChild
               factorX={0.6}
               factorY={0.6}
               className="absolute top-80 -left-24 hidden xl:flex"
@@ -85,9 +85,9 @@ const Banner = () => {
                 alt=""
                 priority={1}
               />
-            </MouseParallaxChild>
+            </MouseParallaxChild> */}
             {/* garlic image 2*/}
-            <MouseParallaxChild
+            {/* <MouseParallaxChild
               factorX={0.3}
               factorY={0.6}
               className="absolute top-[22rem] -left-8 hidden xl:flex"
@@ -99,9 +99,9 @@ const Banner = () => {
                 alt=""
                 priority={1}
               />
-            </MouseParallaxChild>
+            </MouseParallaxChild> */}
             {/* garlic image 3*/}
-            <MouseParallaxChild
+            {/* <MouseParallaxChild
               factorX={0.4}
               factorY={0.1}
               className="absolute top-96 -left-20 hidden xl:flex"
@@ -113,9 +113,9 @@ const Banner = () => {
                 alt=""
                 priority={1}
               />
-            </MouseParallaxChild>
+            </MouseParallaxChild> */}
             {/* leaves*/}
-            <MouseParallaxChild
+            {/* <MouseParallaxChild
               factorX={0.2}
               factorY={0.2}
               className="absolute top-96 left-12 hidden xl:flex"
@@ -127,7 +127,7 @@ const Banner = () => {
                 alt=""
                 priority={1}
               />
-            </MouseParallaxChild>
+            </MouseParallaxChild> */}
           </MouseParallaxChild>
         </MouseParallaxContainer>
       </div>
