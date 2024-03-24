@@ -68,14 +68,14 @@ const Pizza = ({ pizza }) => {
         onClick={openModal}
         className="hidden lg:flex gradient text-white rounded-lg btn-sm font-semibold text-sm"
       >
-        Choose
+        Add to cart
       </button>
       {/* btn -> visible (sm) - hidden (lg)  */}
       <button
         onClick={openModal}
         className="btn btn-sm gradient text-sm lg:hidden px-3"
       >
-        start at {pizza.priceSm}
+        Add to cart
       </button>
       {/* modal */}
       {modal && (

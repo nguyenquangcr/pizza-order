@@ -70,7 +70,7 @@ const CartItem = ({ pizza }) => {
       {/* toppings */}
       <div className="flex flex-wrap items-center gap-3 p-6 border-b border-black/10 ">
         <div className="font-semibold">
-          Topping: {pizza.additionalTopping.length === 0 && "None"}
+          More: {pizza.additionalTopping.length === 0 && "None"}
         </div>
         {pizza.additionalTopping.map((Topping, index) => {
           return (
