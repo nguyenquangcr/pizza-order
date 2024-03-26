@@ -43,7 +43,7 @@ const Pizza = ({ pizza }) => {
       />
       {/* title */}
       <div onClick={openModal}>
-        <div className="text-xl font-bold mb-3 capitalize cursor-pointer">
+        <div className="text-xl font-bold mb-3 capitalize cursor-pointer line-clamp-2">
           {pizza.name}
         </div>
       </div>
