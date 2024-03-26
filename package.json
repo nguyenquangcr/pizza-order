@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --ext js,jsx,ts,tsx src/",
+    "lint-staged": "lint-staged",
+    "postinstall": "husky install",
+    "commit": "node ./node_modules/cz-customizable/standalone.js"
   },
   "dependencies": {
+
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
@@ -21,7 +25,20 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.1",
+    "husky": "^8.0.3",
+    "cz-customizable": "^7.0.0",
+    "lint-staged": "^13.2.1",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "postcss": "^8.4.21"
+  },
+  "config": {
+    "cz-customizable": {
+      "config": "./.cz-config.cjs"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "yarn lint"
   }
 }

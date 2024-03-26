@@ -49,7 +49,7 @@ const Pizza = ({ pizza }) => {
       </div>
       {/* description */}
       <div>
-        <div className="text-sm font-medium min-h-[60px] mb-6 ">
+        <div className="text-sm font-medium mb-6 line-clamp-3">
           {pizza.description}
         </div>
       </div>

@@ -31,7 +31,13 @@ const PizzaDetails = ({ pizza, setModal }) => {
       : size === "large"
       ? setPrice(parseFloat(pizza.priceLg + additionalToppingPrice).toFixed(2))
       : null;
-  });
+  }, [
+    size,
+    pizza.priceSm,
+    pizza.priceMd,
+    pizza.priceLg,
+    additionalToppingPrice,
+  ]);
 
   //set additional topping price
   useEffect(() => {
