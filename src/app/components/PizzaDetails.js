@@ -67,7 +67,7 @@ const PizzaDetails = ({ pizza, setModal }) => {
       {/* detail */}
       <div className="flex flex-col flex-1">
         <div className="flex-1 p-2 text-center lg:text-left">
-          <div className="flex-1 bg-white overflow-y-scroll h-[35vh] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
+          <div className="flex-1 bg-white overflow-y-scroll h-[40vh] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
             {/* name */}
             <div className="font-semibold">
               <h2 className="capitalize text-3xl mb-1">{pizza.name}</h2>
@@ -107,7 +107,7 @@ const PizzaDetails = ({ pizza, setModal }) => {
           </div>
         </div>
         {/* add to cart btn */}
-        <div className="h-full flex items-center px-2 lg:items-end">
+        <div className="h-full flex items-start px-2 lg:items-end">
           <button
             onClick={() => {
               addToCart(
