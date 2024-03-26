@@ -53,10 +53,10 @@ const PizzaDetails = ({ pizza, setModal }) => {
     <div className="flex flex-col lg:flex-row lg:gap-x-8 h-full md:p-8">
       {/* top */}
       <div className="lg:flex-1 flex justify-center items-center">
-        <div className="max-w-[300px] lg:max-w-none mt-6 lg:mt-0">
+        <div className="max-w-[300px] lg:max-w-none mt-1 lg:mt-0">
           <Image
-            width={450}
-            height={450}
+            width={300}
+            height={300}
             src={pizza.image}
             alt=""
             priority={1}
@@ -67,7 +67,7 @@ const PizzaDetails = ({ pizza, setModal }) => {
       {/* detail */}
       <div className="flex flex-col flex-1">
         <div className="flex-1 p-2 text-center lg:text-left">
-          <div className="flex-1 bg-white overflow-y-scroll h-[46vh] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
+          <div className="flex-1 bg-white overflow-y-scroll h-[40vh] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
             {/* name */}
             <div className="font-semibold">
               <h2 className="capitalize text-3xl mb-1">{pizza.name}</h2>
