@@ -11,7 +11,7 @@ const PizzaDetails = ({ pizza, setModal }) => {
   // pizza size state
   const [size, setSize] = useState("small");
   // pizza crust state
-  const [crust, setCrust] = useState("traditional");
+  const [crust, setCrust] = useState("big");
   //pizza topping state
   const [additionalTopping, setAdditionalTopping] = useState([]);
   //pizza topping price
@@ -55,8 +55,8 @@ const PizzaDetails = ({ pizza, setModal }) => {
       <div className="lg:flex-1 flex justify-center items-center">
         <div className="max-w-[300px] lg:max-w-none mt-1 lg:mt-0">
           <Image
-            width={300}
-            height={300}
+            width={200}
+            height={200}
             src={pizza.image}
             alt=""
             priority={1}
@@ -67,7 +67,7 @@ const PizzaDetails = ({ pizza, setModal }) => {
       {/* detail */}
       <div className="flex flex-col flex-1">
         <div className="flex-1 p-2 text-center lg:text-left">
-          <div className="flex-1 bg-white overflow-y-scroll h-[40vh] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
+          <div className="flex-1 bg-white overflow-y-scroll h-[35vh] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
             {/* name */}
             <div className="font-semibold">
               <h2 className="capitalize text-3xl mb-1">{pizza.name}</h2>

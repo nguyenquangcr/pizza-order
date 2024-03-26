@@ -8,24 +8,24 @@ const CrustSelection = ({ crust, setCrust }) => {
             className="appearance-none w-4 h-4 border border-gray-400 rounded-full checked:bg-gradient-to-r checked: from-primary checked:to-secondary checked:border-secondary cursor-pointer"
             type="radio"
             name="crust"
-            value="traditional"
-            checked={crust === "traditional"}
+            value="big"
+            checked={crust === "big"}
             onChange={(e) => setCrust(e.target.value)}
           />{" "}
-          Traditional
+          Big
         </label>
         <label className="flex items-center gap-x-2 cursor-pointer">
           <input
             className="appearance-none w-4 h-4 border border-gray-400 rounded-full checked:bg-gradient-to-r checked: from-primary checked:to-secondary checked:border-secondary cursor-pointer"
             type="radio"
             name="crust"
-            value="thin"
-            checked={crust === "thin"}
+            value="small"
+            checked={crust === "small"}
             onChange={(e) => {
               setCrust(e.target.value);
             }}
           />{" "}
-          Thin
+          Small
         </label>
       </div>
     </div>
